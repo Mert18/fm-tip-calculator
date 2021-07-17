@@ -1,0 +1,179 @@
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* COLORS */
+:root{
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan2: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body{
+  font-size: 62.5%;
+  font-family: 'Space Mono', monospace;
+  background-color: var(--light-grayish-cyan);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+}
+
+.logo{
+  justify-self: center;
+}
+
+.app{
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+input{
+  font-family: inherit;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  height: 5vh;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--dark-grayish-cyan2);
+}
+.inputs{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inputs-bill{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputs-bill label{
+  font-size: .9rem;
+  color: var(--very-dark-cyan);
+}
+.inputs-bill input{
+  border-radius: .3rem;
+  padding-right: 1rem;
+  background: var(--light-grayish-cyan2) url(/images/icon-dollar.svg) no-repeat scroll 10px 10px;
+  text-align: right;
+  margin: .2rem;
+
+}
+
+.inputs-tip{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-tip-label label{
+  font-size: .9rem;
+  color: var(--very-dark-cyan);
+}
+
+.inputs-tip-tip{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.inputs-tip-tip input{
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.inputs-tip-tip #custom{
+  background-color: var(--light-grayish-cyan2);
+  color: var(--very-dark-cyan);
+}
+.inputs-numberofpeople label{
+  font-size: .9rem;
+  color: var(--very-dark-cyan);
+}
+.inputs-numberofpeople input{
+  display: flex;
+  flex-direction: column;
+  background: var(--light-grayish-cyan2) url(/images/icon-person.svg) no-repeat scroll 10px 10px;
+  text-align: right;
+  padding-right: 1rem;
+  margin: .2rem;
+
+}
+
+
+/* CALCULATOR */
+.calc{
+  width: 20rem;
+  margin: 1rem;
+  background-color: var(--very-dark-cyan);
+  border-radius: .6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calc-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.calc-item-text{
+  color: var(--white);
+  font-size: .7rem;
+}
+.calc-item-text p{
+  color: var(--dark-grayish-cyan2);
+}
+.calc-item-price {
+  color: var(--strong-cyan);
+  font-size: 1rem;
+}
+.calc-reset{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-reset button{
+  margin: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  height: 5vh;
+  border: none;
+  outline: none;
+  background-color: var(--strong-cyan);
+}
+
+.attribution{
+  justify-self: center;
+  padding: 2rem;
+}
+
+/* MOBILE DESIGN */
+@media only screen and (max-width: 375px) {
+
+}
+
+/* REMOVE ARROWS AND SPINNERS FROM INPUTS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

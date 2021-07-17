@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="images/logo.svg" alt="splitter" />
+    </div>
+
+    <div class="app">
+      <div class="inputs">
+        <div class="inputs-bill">
+          <label htmlFor="bill">Bill</label>
+          <input type="number" id="bill" value=0 />
+        </div>
+
+        <div class="inputs-tip">
+          <div class="inputs-tip-label">
+            <label htmlFor="tip">Select Tip %</label>
+          </div>
+          <div class="inputs-tip-tip" id="tip">
+            <input id="five" type="button" value="5%"></input>
+            <input id="ten" type="button" value="10%"></input>
+            <input id="fifteen" type="button" value="15%"></input>
+            <input id="twentyfive" type="button" value="25%"></input>
+            <input id="fifty" type="button" value="50%"></input>
+            <input id="custom" type="button" value="Custom"></input>
+          </div>
+        </div>
+
+        <div class="inputs-numberofpeople">
+          <label htmlFor="nop">Number of People</label>
+          <input type="number" id="nop" value=0 />
+        </div>
+      </div>
+
+      <div class="calc">
+        <div class="calc-item">
+          <div class="calc-item-text">
+            <h3>Tip Amount</h3>
+            <p>/ person</p>
+          </div>
+          <div class="calc-item-price">
+            <h1>$0.00</h1>
+          </div>
+        </div>
+        <div class="calc-item">
+          <div class="calc-item-text">
+            <h3>Total</h3>
+            <p>/ person</p>
+          </div>
+          <div class="calc-item-price">
+            <h1>$0.00</h1>
+          </div>
+        </div>
+
+        <div class="calc-reset">
+          <button>RESET</button>
+        </div>
+      </div>
+
+    </div>
+  
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Mert Uyğur</a>.
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
