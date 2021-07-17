@@ -13,10 +13,19 @@
   --white: hsl(0, 0%, 100%);
 }
 
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
 body{
   font-size: 62.5%;
   font-family: 'Space Mono', monospace;
   background-color: var(--light-grayish-cyan);
+  box-sizing: border-box;
 }
 
 .container{
@@ -36,19 +45,22 @@ body{
   border-radius: 1rem;
   margin: 1rem;
   display: flex;
+  justify-content: center;
 }
 input{
   font-family: inherit;
   border: none;
   outline: none;
   font-weight: 700;
-  height: 5vh;
+  height: 2.5rem;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--dark-grayish-cyan2);
+  border: 3px solid transparent;
+  border-radius: .3rem;
 }
 .inputs{
-  padding: 2rem;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,12 +75,14 @@ input{
   color: var(--very-dark-cyan);
 }
 .inputs-bill input{
-  border-radius: .3rem;
   padding-right: 1rem;
   background: var(--light-grayish-cyan2) url(/images/icon-dollar.svg) no-repeat scroll 10px 10px;
   text-align: right;
   margin: .2rem;
-
+  color: var(--very-dark-cyan);
+}
+.inputs-bill input:focus{
+  border: 3px solid var(--strong-cyan);
 }
 
 .inputs-tip{
@@ -90,12 +104,35 @@ input{
 .inputs-tip-tip input{
   background-color: var(--very-dark-cyan);
   color: var(--white);
-  font-size: 1rem;
-  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.inputs-tip-tip input:hover{
+  cursor: pointer;
+  background-color: var(--strong-cyan);
 }
 .inputs-tip-tip #custom{
   background-color: var(--light-grayish-cyan2);
   color: var(--very-dark-cyan);
+  width: 6.5rem;
+  text-align: right;
+  padding: .2rem;
+}
+
+.inputs-tip-tip #custom::placeholder{
+  text-align: center;
+}
+.inputs-tip-tip #custom:focus{
+  border: 3px solid var(--strong-cyan);
+}
+
+.inputs-tip-tip .active{
+  background-color: var(--strong-cyan);
+}
+
+.inputs-numberofpeople{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .inputs-numberofpeople label{
   font-size: .9rem;
@@ -108,6 +145,12 @@ input{
   text-align: right;
   padding-right: 1rem;
   margin: .2rem;
+  color: var(--very-dark-cyan);
+  
+}
+
+.inputs-numberofpeople input:focus{
+  border: 3px solid var(--strong-cyan);
 
 }
 
@@ -115,6 +158,7 @@ input{
 /* CALCULATOR */
 .calc{
   width: 20rem;
+  height: 20rem;
   margin: 1rem;
   background-color: var(--very-dark-cyan);
   border-radius: .6rem;
@@ -127,12 +171,12 @@ input{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .calc-item-text{
   color: var(--white);
-  font-size: .7rem;
+  font-size: .8rem;
 }
 .calc-item-text p{
   color: var(--dark-grayish-cyan2);
@@ -154,6 +198,10 @@ input{
   border: none;
   outline: none;
   background-color: var(--strong-cyan);
+}
+.calc-reset button:hover{
+  cursor: pointer;
+  background-color: var(--light-grayish-cyan);
 }
 
 .attribution{

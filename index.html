@@ -24,7 +24,7 @@
       <div class="inputs">
         <div class="inputs-bill">
           <label htmlFor="bill">Bill</label>
-          <input type="number" id="bill" value=0 />
+          <input type="number" id="bill" placeholder="0" value=0 />
         </div>
 
         <div class="inputs-tip">
@@ -32,18 +32,18 @@
             <label htmlFor="tip">Select Tip %</label>
           </div>
           <div class="inputs-tip-tip" id="tip">
-            <input id="five" type="button" value="5%"></input>
-            <input id="ten" type="button" value="10%"></input>
-            <input id="fifteen" type="button" value="15%"></input>
-            <input id="twentyfive" type="button" value="25%"></input>
-            <input id="fifty" type="button" value="50%"></input>
-            <input id="custom" type="button" value="Custom"></input>
+            <input class="tippie" id="five" type="button" value="5%"></input>
+            <input class="tippie active" id="ten" type="button" value="10%"></input>
+            <input class="tippie" id="fifteen" type="button" value="15%"></input>
+            <input class="tippie" id="twentyfive" type="button" value="25%"></input>
+            <input class="tippie" id="fifty" type="button" value="50%"></input>
+            <input class="tippie" id="custom" type="number" placeholder="Custom"></input>
           </div>
         </div>
 
         <div class="inputs-numberofpeople">
           <label htmlFor="nop">Number of People</label>
-          <input type="number" id="nop" value=0 />
+          <input type="number" id="nop" placeholder="0" />
         </div>
       </div>
 
@@ -54,7 +54,7 @@
             <p>/ person</p>
           </div>
           <div class="calc-item-price">
-            <h1>$0.00</h1>
+            <h1>$<span id="tipa">0.00</span></h1>
           </div>
         </div>
         <div class="calc-item">
@@ -63,12 +63,12 @@
             <p>/ person</p>
           </div>
           <div class="calc-item-price">
-            <h1>$0.00</h1>
+            <h1>$<span id="total"></span></h1>
           </div>
         </div>
 
         <div class="calc-reset">
-          <button>RESET</button>
+          <button id="btn-reset">RESET</button>
         </div>
       </div>
 
